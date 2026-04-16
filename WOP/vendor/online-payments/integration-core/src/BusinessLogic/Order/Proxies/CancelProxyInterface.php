@@ -1,0 +1,15 @@
+<?php
+
+namespace common\modules\orderPayment\WOP\OnlinePayments\Core\BusinessLogic\Order\Proxies;
+
+use common\modules\orderPayment\WOP\OnlinePayments\Core\BusinessLogic\Domain\Cancel\CancelRequest;
+use common\modules\orderPayment\WOP\OnlinePayments\Core\BusinessLogic\Domain\Cancel\CancelResponse;
+/**
+ * Interface CancelProxyInterface.
+ *
+ * @package OnlinePayments\Core\BusinessLogic\Order\Proxies
+ */
+interface CancelProxyInterface
+{
+    public function create(CancelRequest $cancelRequest): CancelResponse;
+}

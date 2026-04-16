@@ -1,0 +1,151 @@
+name: Build Brands
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  generate-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.make-matrix.outputs.matrix }}
+    steps:
+      - id: make-matrix
+        run: |
+          echo "BRAND_VERSIONS raw: ${BRAND_VERSIONS}"
+          if [ -z "${BRAND_VERSIONS}" ]; then
+            echo 'matrix={"include":[]}' >> $GITHUB_OUTPUT
+          else
+            # Generate matrix with name, version and repo
+            echo "matrix=$(echo "${BRAND_VERSIONS}" | jq -c '
+              {include: [ to_entries[] |
+                { name: .key, brand: .value.brand, repo: .value.repo }
+              ] }
+            ')" >> $GITHUB_OUTPUT
+          fi
+        env:
+          BRAND_VERSIONS: ${{ vars.BRAND_VERSIONS }}
+
+  build:
+    needs: generate-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+
+      - name: Verify PHP binaries
+        run: php -v
+
+      - name: Configure composer global bin
+        run: |
+          echo "${HOME}/.composer/vendor/bin" >> $GITHUB_PATH
+          echo "${HOME}/.config/composer/vendor/bin" >> $GITHUB_PATH
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip git curl jq zip gettext
+
+      - name: Make scripts executable
+        run: |
+          chmod +x ./build/build.sh ./build/build-utils.sh ./build/steps/scope-and-package.sh
+
+      - name: Extract token
+        id: token
+        run: |
+          TOKEN=$(echo '${{ secrets.VCS_TOKENS }}' | jq -r --arg name "${{ matrix.name }}" '.[$name]')
+          echo "::add-mask::$TOKEN"
+          echo "TOKEN=$TOKEN" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Configure composer
+        run: |
+          echo "${HOME}/.composer/vendor/bin" >> $GITHUB_PATH
+          echo "${HOME}/.config/composer/vendor/bin" >> $GITHUB_PATH
+          php /usr/local/bin/composer config --global github-oauth.github.com ${{ steps.token.outputs.TOKEN }}
+
+      - name: Run build script
+        id: build
+        shell: bash
+        run: |
+          ./build/build.sh "${{ matrix.brand }}" "${{ matrix.repo }}" "${{ matrix.brand }}"
+          ZIP_FILE=$(ls "./dist/${{ matrix.brand }}"/*.zip)
+          echo "ZIP_FILE=$ZIP_FILE" >> $GITHUB_OUTPUT
+
+      - name: Prepare repo info
+        id: repo
+        run: |
+          TARGET_REPO="${{ matrix.repo }}"
+          echo "TARGET_REPO=$TARGET_REPO" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Unzip and push
+        shell: bash
+        run: |
+          git config --global user.email "dev+WorldlinePlugins@logeecom.com"
+          git config --global user.name "Worldline-plugins-1"
+
+          mkdir extracted
+          unzip -q "${{ steps.build.outputs.ZIP_FILE }}" -d extracted
+
+          INNER_DIR=$(find extracted -mindepth 1 -maxdepth 1 -type d | head -n1)
+          echo "Using inner dir: $INNER_DIR"
+
+          git clone https://${{ steps.token.outputs.TOKEN }}@github.com/${{ steps.repo.outputs.TARGET_REPO }} target-repo
+          cd target-repo
+          git config --global --add safe.directory "$(pwd)"
+          git fetch origin main || true
+          git checkout -B main origin/main 2>/dev/null || git checkout -B main
+          rsync -a --delete --exclude='.git/' --exclude='auth.json' ../"$INNER_DIR"/ ./
+          git remote set-url origin "https://x-access-token:${{ steps.token.outputs.TOKEN }}@github.com/${{ steps.repo.outputs.TARGET_REPO }}.git"
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          # Check if tag already exists in target repo before committing
+          echo "== Checking if tag ${{ github.ref_name }} exists =="
+          if git ls-remote --tags origin | grep -q "refs/tags/${{ github.ref_name }}$"; then
+            echo "ERROR: Tag ${{ github.ref_name }} already exists in target repository!"
+            exit 1
+          fi
+
+          git commit -m "Version ${{ github.ref_name }}"
+
+          echo "== First push attempt (FF) =="
+          if ! git push origin HEAD:refs/heads/main; then
+            echo "Non-fast-forward/race. Syncing and retrying…"
+            git fetch origin main --prune
+            set +e
+            git rebase "origin/main"
+            RC=$?
+            if [ $RC -ne 0 ]; then
+              echo "Rebase conflict — fallback to merge."
+              git rebase --abort || true
+              git merge --no-edit "origin/main"
+            fi
+            set -e
+            echo "== Second push attempt =="
+            if ! git push origin HEAD:refs/heads/main; then
+              echo "ERROR: Second push attempt failed!"
+              exit 1
+            fi
+          fi
+
+          # Create and push the tag
+          echo "== Pushing tag ${{ github.ref_name }} =="
+          git tag "${{ github.ref_name }}"
+          git push origin "${{ github.ref_name }}"
+          cd ..

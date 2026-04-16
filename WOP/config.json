@@ -1,0 +1,10 @@
+{
+  "BRAND": "WOP",
+  "MODULE_NAME": "worldlineop",
+  "VERSION": "1.0.0",
+  "NAME": "Worldline GoPay",
+  "AUTHOR": "Worldline GoPay",
+  "DESCRIPTION": "This module offers a 1-click integration to start accepting payments and grow your revenues by offering your customers with global and regional payment methods to sell across Europe.",
+  "HELP_LINK": "https://docs.direct.worldline-solutions.com/en/integration/how-to-integrate/plugins/index",
+  "GITHUB_ENDPOINT": "https://api.github.com/repos/logeecom/worldline-direct-oscommerce/releases/latest"
+}

@@ -1,0 +1,569 @@
+{
+  "general": {
+    "save": "Guardar",
+    "saveChanges": "Guardar cambios",
+    "unsavedChanges": "Cambios no guardados",
+    "discardChanges": "Descartar cambios",
+    "cancel": "Cancelar",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "OK",
+    "back": "Atrás",
+    "confirm": "Confirmar",
+    "enable": "Habilitar",
+    "disable": "Deshabilitar",
+    "add": "Añadir",
+    "edit": "Editar",
+    "delete": "Quitar",
+    "discard": "Descartar",
+    "any": "ANY",
+    "clear": "Borrar / Limpiar",
+    "apply": "Aplicar",
+    "search": "Buscar",
+    "viewDetails": "Ver detalles",
+    "changesSaved": "Cambios guardados con éxito.",
+    "direct": "Directo",
+    "documentation": "Documentación",
+    "needHelp": "¿Necesitas ayuda?",
+    "helpLink": "",
+    "readyToGoLive": "Listo para publicar",
+    "createAccount": "Crear cuenta de prueba",
+    "configurePlugin": "Configuración del complemento",
+    "generalDocumentation": "Documentación general",
+    "managePayment": "Gestionar pago",
+    "payments": "Pagos",
+    "monitoring": "Supervisión",
+    "settings": "Configuración",
+    "copied": "Copiada!",
+    "mode": {
+      "test": "Sandbox mode.",
+      "live": "Live mode."
+    },
+    "version": {
+      "update": "Por favor, actualice a la última versión %s."
+    },
+    "errors": {
+      "InvalidOperationException": "Ocurrió un error en el servidor. Por favor, verifique los datos y vuelva a intentar.",
+      "unknown": "Ocurrió un error desconocido. Por favor, inténtelo de nuevo más tarde.",
+      "saveEntityFailed": "Falló al guardar la entidad debido a %s",
+      "getEntityFailed": "Falló al recuperar la entidad debido a %s",
+      "failedToRetrieveStores": "Falló al recuperar tiendas.",
+      "failedToRetrieveOrderStatuses": "Falló al recuperar estados de pedido.",
+      "general": {
+        "unhandled": "Ocurrió un error. Por favor, verifique todas las entradas y vuelva a intentar."
+      },
+      "stores": {
+        "invalidIdAndStatus": "El Id de estado y el nombre del estado no son válidos."
+      },
+      "connection": {
+        "emptyStoreId": "ID de tienda vacío.",
+        "invalidMode": "Entorno inválido.",
+        "emptyData": "La clave API no debe estar vacía.",
+        "emptyApiSecret": "El API secreto no debe estar vacío.",
+        "emptyWebhooksKey": "La clave Webhooks no debe estar vacía.",
+        "emptyWebhooksSecret": "El secreto Webhooks no debe estar vacío.",
+        "settingsNotFound": "Configuraciones de conexión no encontradas.",
+        "invalidSettings": "Las configuraciones de conexión no son válidas.",
+        "testKeyChanged": "La clave API de prueba ha sido cambiada.",
+        "liveKeyChanged": "La clave API en vivo ha sido cambiada."
+      }
+    }
+  },
+  "validation": {
+    "requiredField": "Este campo es obligatorio.",
+    "maxLength": "El campo no puede tener más de %s caracteres.",
+    "greaterThanZero": "El valor debe ser mayor que 0.",
+    "nonNegative": "El campo no puede tener un valor negativo.",
+    "integer": "El campo debe ser un entero.",
+    "invalidNumberInList": "Cada valor debe ser un número positivo.",
+    "invalidWholeNumberInList": "Cada valor debe ser un entero positivo.",
+    "duplicateNumberInList": "La lista no puede contener valores duplicados.",
+    "invalidImageType": "Proporcione un archivo en uno de los tipos de imagen compatibles (PNG, JPG, SVG).",
+    "invalidImageSize": "El archivo proporcionado excede el límite de 10 MB."
+  },
+  "connection": {
+    "mode": {
+      "title": "Mode",
+      "description": "Seleccione entre \"Sandbox\" o \"Live\" para vincular su tienda al entorno respectivo.",
+      "options": {
+        "sandbox": "Sandbox",
+        "live": "Live"
+      }
+    },
+    "pspid": {
+      "title": "PSPID",
+      "description": "Introduzca su PSPID de nuestra plataforma que desea utilizar para el procesamiento de transacciones.",
+      "placeholder": "Introducir PSPID"
+    },
+    "apiKey": {
+      "title": "Clave API",
+      "description": "Introduzca la clave API de su PSPID de sandbox o en vivo.",
+      "placeholder": "Introduzca %s clave API",
+      "error": "La clave API no debe estar vacía."
+    },
+    "apiSecret": {
+      "title": "API Secreto",
+      "description": "Introduzca el secreto de API de su PSPID de sandbox o en vivo.",
+      "placeholder": "Introduzca %s API secreto",
+      "error": "El API secreto no debe estar vacío."
+    },
+    "webhooksKey": {
+      "title": "Webhooks Clave",
+      "description": "Introduzca la clave Webhooks de su PSPID de sandbox o en vivo.",
+      "placeholder": "Introducir clave webhooks",
+      "error": "La clave Webhooks no debe estar vacía."
+    },
+    "webhooksSecret": {
+      "title": "Webhooks Secreto",
+      "description": "Introduzca el secreto Webhooks de su PSPID de sandbox o en vivo.",
+      "placeholder": "Introducir secreto webhooks",
+      "error": "El secreto Webhooks no debe estar vacío."
+    },
+    "webhooksUrl": {
+      "title": "Webhooks URL",
+      "description": "Para evitar problemas de copiar y pegar, use el icono de copiar para copiar la URL."
+    },
+    "connect": "Conectar",
+    "messages": {
+      "connectionUpdated": "Conectado con éxito.",
+      "connectionFailed": "Conexión fallida."
+    }
+  },
+  "payments": {
+    "pageTitle": "Mis métodos de pago",
+    "title": "Aquí puede habilitar los métodos de pago que aparecerán en el checkout. Habilitar un método de pago aplicará la configuración predeterminada. Para personalizar estas configuraciones, haga clic en los tres puntos y luego en Configuración.",
+    "paymentGroups": {
+      "mobile": "Móvil",
+      "realTimeBanking": "Banca en tiempo real",
+      "giftCards": "Tarjeta regalo",
+      "prepaid": "Prepago",
+      "instalment": "Cuotas",
+      "cards": "Tarjetas (débito y crédito)",
+      "eWallet": "Billetera electrónica",
+      "postpaid": "Postpago",
+      "directDebit": "Débito directo",
+      "hosted": "Página alojada"
+    },
+    "integrationType": {
+      "hosted": "Página alojada",
+      "redirect": "Redireccionar",
+      "tokenization": "Incorporado"
+    },
+    "list": {
+      "filter": "Filtro",
+      "paymentMethod": "Método de pago",
+      "settings": "Configuración",
+      "learnMore": "Aprender más"
+    },
+    "filter": {
+      "filter": "Filtros",
+      "types": {
+        "label": "Tipo",
+        "selectPlaceholder": "Seleccionar tipos"
+      },
+      "paymentGroups": {
+        "label": "Grupo de pagos",
+        "selectPlaceholder": "Seleccionar grupos de pago"
+      },
+      "paymentProduct": {
+        "label": "Producto de pago",
+        "placeholder": "Introducir nombre del producto"
+      },
+      "statuses": {
+        "label": "Estado",
+        "labelPlural": "Estados",
+        "selectPlaceholder": "Seleccionar un estado para filtrar"
+      },
+      "resetAll": "Restablecer todo"
+    },
+    "configure": {
+      "methodSaved": "El método de pago está guardado.",
+      "fields": {
+        "name": {
+          "label": "Nombre de pago",
+          "description": "El nombre del método de pago que aparecerá en el checkout. Debe poder traducirse a todos los idiomas admitidos por la tienda."
+        },
+        "enableOnCheckout": {
+          "label": "Habilitar en el checkout",
+          "description": "Habilita o deshabilita el método de pago en el checkout."
+        },
+        "templateName": {
+          "label": "Nombre de la plantilla",
+          "description": "Si está vacío, se mostrará la página de pago estándar."
+        },
+        "vaultTitle": {
+          "label": "Título del almacén"
+        },
+        "instantPayment": {
+          "label": "Pago instantáneo solamente",
+          "description": "Defina si desea aceptar solo pagos que sean instantáneos usando este método de pago"
+        },
+        "directDebitRecurrence": {
+          "label": "Tipo de recurrencia de pago de la domiciliación bancaria",
+          "unique": "Única",
+          "recurring": "Recurrente"
+        },
+        "directDebitSignature": {
+          "label": "Tipo de firma de domiciliación bancaria",
+          "SMS": "SMS",
+          "UNSIGNED": "UNSIGNED",
+          "TICK_BOX": "TICK_BOX"
+        },
+        "sessionTimeout": {
+          "label": "Tiempo de espera de sesión",
+          "description": "Los clientes que intenten completar su pago después de este plazo no podrán completar su transacción. Plazo permitido, de 1 a 1440 minutos (24 horas)"
+        },
+        "productId": {
+          "label": "ID de producto",
+          "description": "Definir la marca asociada a su tarjeta regalo Intersolve proporcionando el productId a usar."
+        },
+        "paymentOption": {
+          "label": "Opción de pago Oney3x4x"
+        },
+        "logo": {
+          "label": "Descargar una imagen",
+          "description": "",
+          "error": "Proporcionar un archivo en uno de los formatos soportados (PNG, JPG, SVG)."
+        },
+        "enableGroupCards": {
+          "label": "Activar agrupación de tarjetas",
+          "description": "Agrupa todos los métodos de pago con tarjeta bajo una única opción en la página de pago."
+        },
+        "flowType": {
+          "label": "Tipo",
+          "redirect": "Redireccionar",
+          "iframe": "iFrame"
+        }
+      }
+    },
+    "switchToStore": {
+      "title": "Cambios no guardados",
+      "description": "Los cambios que ha realizado no se han guardado. ¿Desea continuar sin guardar?"
+    },
+    "messages": {
+      "methodAdded": "Nuevo método de pago agregado."
+    }
+  },
+  "generalSettings": {
+    "title": "Configuración",
+    "accountSettings": {
+      "title": "Configuración de la cuenta",
+      "message": "Configuración de la cuenta guardada con éxito.",
+      "error": "Error al guardar la configuración de la cuenta."
+    },
+    "paymentSettings": {
+      "title": "Configuración de pago",
+      "description": "Configure los ajustes predeterminados para todos los métodos de pago.",
+      "message": "Configuración guardada con éxito.",
+      "error": "Error al guardar la configuración de pago.",
+      "paymentAction": {
+        "title": "Acción de pago",
+        "description": "",
+        "values": {
+          "authorize": "Solo autorización",
+          "authorizeCapture": "Autorizar y capturar"
+        }
+      },
+      "automaticCapture": {
+        "title": "Captura automática",
+        "description": "La captura automática se aplica a todos los pagos con autorización solamente",
+        "values": {
+          "never": "Nunca",
+          "oneHour": "1 hora",
+          "twoHours": "2 horas",
+          "fourHours": "4 horas",
+          "eightHours": "8 horas",
+          "oneDay": "24 horas",
+          "twoDays": "2 días",
+          "fiveDays": "5 días"
+        }
+      },
+      "paymentCapturedStatus": {
+        "title": "Mapeo de estado de pago aceptado",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "paymentErrorStatus": {
+        "title": "Mapeo de estado de pago en error",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "paymentPendingStatus": {
+        "title": "Mapeo de estado de pago en espera",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "paymentAuthorizedStatus": {
+        "title": "Mapeo de estado de pago autorizado",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "paymentCancelledStatus": {
+        "title": "Mapeo de estado de pago cancelado",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "paymentRefundedStatus": {
+        "title": "Mapeo de estado de pago reembolsado",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "paymentPartiallyRefundedStatus": {
+        "title": "Partially refunded payment status mapping",
+        "description": "Atención, cambiar este ajuste puede tener un impacto significativo en el procesamiento de sus pagos. No cambie esta opción salvo por necesidades específicas si domina el funcionamiento de los flujos de trabajo relacionados con los estados."
+      },
+      "attemptNumber": {
+        "title": "Número máximo de intentos de pago",
+        "description": "Defina cuántos intentos de pago están autorizados por cliente en la página de pago remota.",
+        "error": "El número de intentos debe estar entre 1 y 10."
+      },
+      "applySurcharge": {
+        "title": "Aplicar recargo",
+        "description": "El recargo le permitirá solicitar un monto adicional al cliente en función de la tarjeta utilizada."
+      }
+    },
+    "cardsSettings": {
+      "title": "Cards settings",
+      "description": "Configure the default settings for cards payment methods.",
+      "message": "Cards settings successfully saved.",
+      "error": "Failed to save cards settings.",
+      "enable3ds": {
+        "title": "Activar autenticación 3-D Secure",
+        "description": "Esto significa que el flujo de desafío (donde se requiere una fuerte autenticación del cliente) y el flujo sin fricción (en el que la entidad emisora asume toda la responsabilidad) pueden activarse."
+      },
+      "enforceStrongAuthentication": {
+        "title": "Exigir autenticación fuerte del cliente para cada pago",
+        "description": ""
+      },
+      "3dsExemption": {
+        "title": "Activar la exención 3DS",
+        "description": "Al activar la exención 3DS, permite al emisor de la tarjeta y a su adquirente evaluar el nivel de riesgo de las transacciones hasta el límite de exención que especifique en EUR. Si se cumplen los criterios, sus clientes quedarán exentos de la autenticación fuerte del cliente (SCA).",
+        "warning": "Tenga en cuenta que si se produce fraude en una transacción a la que se concedió una exención, la responsabilidad recae en el comerciante."
+      },
+      "exemptionType": {
+        "title": "Tipo de exención",
+        "description": "La exención de bajo valor es adecuada para transacciones inferiores al umbral monetario especificado de 30 EUR, permitiendo que estas transacciones de bajo valor eludan la autenticación fuerte del cliente (SCA) y simplifiquen el proceso de pago.\nPor otro lado, la exención de análisis de riesgo de transacción permite una evaluación dinámica del riesgo para sus transacciones. El emisor de la tarjeta y su adquirente evaluarán la transacción en función de varios factores de riesgo, permitiendo que transacciones de hasta 100 EUR sean elegibles para la exención si se consideran de bajo riesgo.",
+        "values": {
+          "lowValue": "low-value",
+          "transactionRisk": "transaction-risk-analysis"
+        }
+      },
+      "exemptionLimit": {
+        "title": "Límite de exención",
+        "description": "El límite de exención se especifica en EURO. Por lo tanto, si la divisa de la cesta no está en EURO, la conversión dependerá del tipo de cambio hacia el EURO. Es esencial tener EURO configurado en su entorno y mantener las tasas de cambio actualizadas para asegurar conversiones precisas.\nSi este valor no está configurado, la exención 3DS no se aplicará y la transacción no se beneficiará de la exención solicitada.\nNota: la PSD2 designa el EURO como la moneda de referencia para determinar los límites de exención para otras divisas en la EEE. Sin embargo, cada región puede decidir adaptar estos límites, y las regiones fuera de la EEE también pueden admitir solicitudes de exención. Debido a estas complejidades, no podemos garantizar que la solicitud de exención será examinada por el emisor o su adquirente.",
+        "errorLowValue": "La cantidad introducida está fuera del rango permitido de 0-30 EUR.",
+        "errorTransactionRisk": "La cantidad introducida está fuera del rango permitido de 0-100 EUR."
+      }
+    },
+    "logSettings": {
+      "title": "Configuración de logs",
+      "description": "Activar el modo de depuración para capturar logs detallados para fines de diagnóstico y prueba.",
+      "message": "Configuración de logs guardada con éxito.",
+      "error": "Error al guardar la configuración de logs.",
+      "debugMode": {
+        "title": "Modo de depuración",
+        "description": ""
+      },
+      "logDays": {
+        "title": "Duración de retención de logs (días)",
+        "description": "",
+        "error": "El número de días debe estar entre 1 y 14."
+      }
+    },
+    "payByLinkSettings": {
+      "title": "Configuración de Pay by Link",
+      "description": "Configurar la configuración predeterminada de Pay by Link.",
+      "message": "Configuración de Pay by Link guardada con éxito.",
+      "error": "Error al guardar la configuración de Pay by Link.",
+      "enable": {
+        "title": "Habilitar Pay by Link"
+      },
+      "payByLinkTitle": {
+        "title": "Título de Pay by Link",
+        "description": "Definir el nombre del método de pago Pay By Link en el back-office de la tienda."
+      },
+      "expirationTime": {
+        "title": "Plazo de expiración por defecto",
+        "description": "Definir el plazo de expiración por defecto en días.",
+        "error": "El plazo de expiración por defecto debe estar entre 0 y 180 días."
+      }
+    },
+    "disconnect": {
+      "title": "Desconectar",
+      "warning": "Tenga en cuenta que la configuración y los datos se eliminarán.",
+      "disconnect": "Desconectar",
+      "disconnectModal": {
+        "title": "Desconectar?",
+        "message": "¿Realmente quiere desconectar su tienda? Esto eliminará todos los métodos de pago y configuraciones, y los compradores no podrán realizar compras en su tienda."
+      }
+    }
+  },
+  "monitoring": {
+    "title": "Supervisión",
+    "download": "Descargar",
+    "details": "Detalles",
+    "pagination": {
+      "numberOfItems": "%s - %s de %s"
+    },
+    "search": {
+      "placeholder": "Buscar por ID de pedido o número de pago"
+    },
+    "logs": {
+      "title": "Registros",
+      "noLogsMessage": "No hay registros por el momento.",
+      "severity": {
+        "DEBUG": "DEBUG",
+        "INFO": "INFO",
+        "WARNING": "WARNING",
+        "CRITICAL": "CRITICAL",
+        "ERROR": "ERROR"
+      },
+      "monitoringLogs": {
+        "orderId": "ID de pedido",
+        "paymentNumber": "Número de pago",
+        "logLevel": "Nivel de registro",
+        "logMessage": "Registro",
+        "createdAt": "Creado el",
+        "viewDetails": "Ver detalles",
+        "requestMethodEndpoint": "Método y EndPoint",
+        "requestBody": "Cuerpo de la solicitud",
+        "responseStatusCode": "Código de respuesta",
+        "responseBody": "Cuerpo de la respuesta"
+      },
+      "modal": {
+        "title": "Detalles",
+        "orderId": "ID de pedido:",
+        "paymentNumber": "Número de pago:",
+        "logLevel": "Nivel de registro:",
+        "logMessage": "Registro:",
+        "createdAt": "Creado el:",
+        "viewDetails": "Ver detalles:",
+        "requestMethod": "Método HTTP:",
+        "requestEndpoint": "EndPoint:",
+        "requestBody": "Cuerpo de la solicitud:",
+        "responseStatusCode": "Código de respuesta:",
+        "responseBody": "Cuerpo de la respuesta:"
+      }
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "noLogsMessage": "No hay registros de Webhooks",
+      "status": {
+        "IN_PROGRESS": "EN PROGRESO",
+        "COMPLETED": "COMPLETED",
+        "PAID": "PAID",
+        "AWAITING": "AWAITING",
+        "FAIL": "FAILED"
+      },
+      "webhookEventsLogs": {
+        "orderId": "ID de pedido",
+        "paymentNumber": "Número de pago",
+        "paymentMethod": "Método de pago",
+        "status": "Estado",
+        "type": "Tipo",
+        "createdAt": "Creado el",
+        "statusCode": "Código de estado",
+        "viewDetails": "Ver detalles"
+      },
+      "modal": {
+        "title": "Detalles del webhook",
+        "orderId": "ID de pedido:",
+        "paymentNumber": "Número de pago:",
+        "paymentMethod": "Método de pago:",
+        "status": "Estado:",
+        "type": "Tipo:",
+        "createdAt": "Creado el:",
+        "statusCode": "Código de estado:",
+        "viewDetails": "Ver detalles:",
+        "webhookBody": "Cuerpo del webhook:"
+      }
+    }
+  },
+  "countries": {
+    "BR": "Brasil",
+    "MX": "México",
+    "TK": "Tokelau",
+    "TR": "Turquía",
+    "AU": "Australia",
+    "AT": "Austria",
+    "BE": "Bélgica",
+    "BG": "Bulgaria",
+    "CA": "Canadá",
+    "HR": "Croacia",
+    "CY": "Chipre",
+    "CZ": "República Checa",
+    "DK": "Dinamarca",
+    "EE": "Estonia",
+    "FI": "Finlandia",
+    "FR": "Francia",
+    "DE": "Alemania",
+    "GI": "Gibraltar",
+    "GR": "Grecia",
+    "HK": "Hong Kong",
+    "HU": "Hungría",
+    "IS": "Islandia",
+    "IE": "Irlanda",
+    "IT": "Italia",
+    "LV": "Letonia",
+    "LI": "Liechtenstein",
+    "LT": "Lituania",
+    "LU": "Luxemburgo",
+    "MT": "Malta",
+    "NL": "Países Bajos",
+    "NZ": "Nueva Zelanda",
+    "NO": "Noruega",
+    "PL": "Polonia",
+    "PT": "Portugal",
+    "PR": "Puerto Rico",
+    "RO": "Rumanía",
+    "SG": "Singapur",
+    "SK": "Eslovaquia",
+    "SI": "Eslovenia",
+    "ES": "España",
+    "SE": "Suecia",
+    "CH": "Suiza",
+    "AE": "Emiratos Árabes Unidos",
+    "GB": "Reino Unido",
+    "US": "Estados Unidos de América"
+  },
+  "WOP": {
+    "connection": "Conecta tu tienda a Worldline",
+    "connectionTitle": "Configura tus claves API a continuación. Si no tienes una cuenta, puedes crear una <a href=\"https://signup.direct.preprod.worldline-solutions.com\" target=\"_blank\"><span>aquí</span></a>.",
+    "links": {
+      "createAccount": "https://signup.direct.preprod.worldline-solutions.com/",
+      "configurePlugin": "https://docs.direct.worldline-solutions.com/en/integration/how-to-integrate/plugins/",
+      "readyToGoLive": "https://worldline.com/en/home/solutions/online-payments/wl-online-payments.html",
+      "generalDocumentation": "https://docs.direct.worldline-solutions.com/en/index"
+    },
+    "payments": {
+      "paymentGroups": {
+        "hosted": "Página alojada"
+      },
+      "hostedCheckout": {
+        "logo": {
+          "description": "El logotipo que aparecerá junto al método de pago Worldline en la página de pago. Formatos de imagen permitidos: png, jpg y jpeg."
+        }
+      },
+      "flowType": {
+        "description": "Define el tipo de flujo que los clientes obtendrán al pagar con este método de pago:\n iFrame - los campos de tarjeta de crédito se incrustarán dentro de una ventana iFrame en la página de pago nativa del sistema de la tienda\n Redirect - se ofrecerá como método de pago estándar y redirigirá a los clientes a la página de Worldline donde ingresarán su información de tarjeta de crédito"
+      }
+    },
+    "documentationLink": "https://docs.direct.worldline-solutions.com/en/payment-methods-and-features/payment-methods/",
+    "generalSettings": {
+      "accountSettings": {
+        "description": "Gestione sus preferencias y configuraciones de API de su cuenta Worldline."
+      },
+      "payByLinkSettings": {
+        "enable": {
+          "description": "Con nuestra función Pay By Link, puede enviar un pago a sus clientes si no finalizan el pago en Worldline durante el proceso de pago, o si desea crear un pedido para un cliente desde el back-office de la tienda y luego enviar un enlace de pago al cliente."
+        },
+        "default": "Worldline Pay by Link"
+      },
+      "disconnect": {
+        "description": "Para conectar otra cuenta Worldline o desconectarse de esta tienda, haga clic en el botón Desconectar a continuación."
+      }
+    },
+    "monitoring": {
+      "logs": {
+        "description": "Aquí puede revisar todas las solicitudes enviadas y las respuestas recibidas del sistema Worldline."
+      },
+      "webhooks": {
+        "description": "Aquí puede revisar los webhooks de pago recibidos y su estado de procesamiento en el sistema Worldline."
+      }
+    }
+  }
+}

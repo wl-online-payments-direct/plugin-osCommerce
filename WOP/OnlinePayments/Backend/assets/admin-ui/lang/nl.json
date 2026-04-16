@@ -1,0 +1,570 @@
+{
+  "general": {
+    "save": "Opslaan",
+    "saveChanges": "Wijzigingen opslaan",
+    "unsavedChanges": "Onopgeslagen wijzigingen",
+    "discardChanges": "Wijzigingen verwijderen",
+    "cancel": "Annuleren",
+    "yes": "Ja",
+    "no": "Nee",
+    "ok": "OK",
+    "back": "Terug",
+    "confirm": "Bevestigen",
+    "enable": "Inschakelen",
+    "disable": "Uitschakelen",
+    "add": "Toevoegen",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "discard": "ALLE",
+    "any": "Wissen / Verwijderen",
+    "clear": "Toepassen",
+    "apply": "Zoeken",
+    "search": "Details bekijken",
+    "viewDetails": "Wijzigingen succesvol opgeslagen.",
+    "changesSaved": "Rechtstreeks",
+    "direct": "Documentatie",
+    "documentation": "Hulp nodig?",
+    "needHelp": "Klaar voor live",
+    "helpLink": "",
+    "readyToGoLive": "Maak een testaccount aan",
+    "createAccount": "Plugin-configuratie",
+    "configurePlugin": "Algemene documentatie",
+    "generalDocumentation": "Beheer betaling",
+    "managePayment": "Betalingen",
+    "payments": "Betalingen",
+    "monitoring": "Monitoring",
+    "settings": "Instellingen",
+    "copied": "Gekopieerd !",
+    "mode": {
+      "test": "Sandbox mode",
+      "live": "Live mode"
+    },
+    "version": {
+      "update": "Werk bij naar de nieuwste %s-versie."
+    },
+    "errors": {
+      "InvalidOperationException": "Er is een fout opgetreden aan de serverzijde. Controleer de gegevens en probeer het opnieuw.",
+      "unknown": "Er is een onbekende fout opgetreden. Probeer het later opnieuw.",
+      "saveEntityFailed": "Fout bij het opslaan van entiteit vanwege %s",
+      "getEntityFailed": "Fout bij het ophalen van entiteit vanwege %s",
+      "failedToRetrieveStores": "Fout bij het ophalen van winkels.",
+      "failedToRetrieveOrderStatuses": "Fout bij het ophalen van bestelstatussen.",
+      "general": {
+        "unhandled": "Er is een fout opgetreden. Controleer alle invoeren en probeer het opnieuw."
+      },
+      "stores": {
+        "invalidIdAndStatus": "Status-id en statusnaam zijn ongeldig."
+      },
+      "connection": {
+        "emptyStoreId": "Lege winkel-ID.",
+        "invalidMode": "Ongeldige omgeving.",
+        "emptyData": "API-sleutel mag niet leeg zijn.",
+        "emptyApiSecret": "API-Geheim mag niet leeg zijn.",
+        "emptyWebhooksKey": "Webhooks-sleutel mag niet leeg zijn.",
+        "emptyWebhooksSecret": "Webhooks Geheim mag niet leeg zijn.",
+        "settingsNotFound": "Verbindingsinstellingen niet gevonden.",
+        "invalidSettings": "Verbindingsinstellingen zijn niet geldig.",
+        "testKeyChanged": "Test-API-sleutel is gewijzigd.",
+        "liveKeyChanged": "Live-API-sleutel is gewijzigd."
+      }
+    }
+  },
+  "validation": {
+    "requiredField": "Dit veld is vereist.",
+    "maxLength": "Het veld mag niet meer dan %s tekens bevatten.",
+    "greaterThanZero": "Waarde moet groter zijn dan 0.",
+    "nonNegative": "Het veld mag geen negatieve waarde hebben.",
+    "integer": "Het veld moet een geheel getal zijn.",
+    "invalidNumberInList": "Elke waarde moet een positief getal zijn.",
+    "invalidWholeNumberInList": "Elke waarde moet een positief geheel getal zijn.",
+    "duplicateNumberInList": "De lijst mag geen duplicaten bevatten.",
+    "invalidImageType": "Lever een bestand aan in een van de ondersteunde afbeeldingsformaten (PNG, JPG, SVG).",
+    "invalidImageSize": "Het meegeleverde bestand overschrijdt de limiet van 10 MB."
+  },
+  "connection": {
+    "mode": {
+      "title": "Mode",
+      "description": "Selecteer tussen \"Sandbox\" of \"Live\" om uw winkel te koppelen aan de respectieve omgeving.",
+      "options": {
+        "sandbox": "Sandbox",
+        "live": "Live"
+      }
+    },
+    "pspid": {
+      "title": "PSPID",
+      "description": "Voer uw PSPID in van ons platform die u wilt gebruiken voor transactie verwerking.",
+      "placeholder": "Voer PSPID in"
+    },
+    "apiKey": {
+      "title": "API-sleutel",
+      "description": "Voer de API-sleutel in van uw sandbox- of live-PSPID.",
+      "placeholder": "Voer %s API-sleutel in",
+      "error": "API-sleutel mag niet leeg zijn."
+    },
+    "apiSecret": {
+      "title": "API Geheim",
+      "description": "Voer het API-geheim in van uw sandbox- of live-PSPID.",
+      "placeholder": "Voer %s API-geheim in",
+      "error": "API-Geheim mag niet leeg zijn."
+    },
+    "webhooksKey": {
+      "title": "Webhooks-sleutel",
+      "description": "Voer de Webhooks-sleutel in van uw sandbox- of live-PSPID.",
+      "placeholder": "Webhooks-sleutel invoeren",
+      "error": "Webhooks-sleutel mag niet leeg zijn."
+    },
+    "webhooksSecret": {
+      "title": "Webhooks Geheim",
+      "description": "Voer het Webhooks-Geheim in van uw sandbox- of live-PSPID.",
+      "placeholder": "Voer webhooks geheim in",
+      "error": "Webhooks Geheim mag niet leeg zijn."
+    },
+    "webhooksUrl": {
+      "title": "Webhooks URL",
+      "description": "Om kopieer/plak-problemen te voorkomen, gebruik u het \"kopiëren\" pictogram om de URL te kopiëren."
+    },
+    "connect": "Verbinden",
+    "messages": {
+      "connectionUpdated": "Succesvol verbonden.",
+      "connectionFailed": "Verbinding mislukt."
+    }
+  },
+  "payments": {
+    "pageTitle": "Mijn betaalmethoden",
+    "title": "Hier kunt u de betaalmethoden inschakelen die bij de kassa verschijnen. Het inschakelen van een betaalmethode past de standaardinstellingen toe. Voor het aanpassen van deze instellingen, klik op de drie puntjes en vervolgens op Instellingen.",
+    "paymentGroups": {
+      "mobile": "Mobiel",
+      "realTimeBanking": "Real-time bankieren",
+      "giftCards": "Cadeaubon",
+      "prepaid": "Vooruitbetaald",
+      "instalment": "Termijnbetalingen",
+      "cards": "Kaarten (debet & credit)",
+      "eWallet": "e-Wallet",
+      "postpaid": "Achterafbetaling",
+      "directDebit": "Automatische incasso",
+      "hosted": "Gehoste pagina"
+    },
+    "integrationType": {
+      "hosted": "Gehoste pagina",
+      "redirect": "Redirect",
+      "tokenization": "Ingebed"
+    },
+    "list": {
+      "filter": "Filter",
+      "paymentMethod": "Betalingsmethode",
+      "settings": "Instellingen",
+      "learnMore": "Meer informatie"
+    },
+    "filter": {
+      "filter": "Filters",
+      "types": {
+        "label": "Type",
+        "selectPlaceholder": "Typen selecteren"
+      },
+      "paymentGroups": {
+        "label": "Betalingsgroep",
+        "selectPlaceholder": "Betalingsgroepen selecteren"
+      },
+      "paymentProduct": {
+        "label": "Betalingsproduct",
+        "placeholder": "Voer productnaam in"
+      },
+      "statuses": {
+        "label": "Status",
+        "labelPlural": "Statussen",
+        "selectPlaceholder": "Selecteer een status om op te filteren"
+      },
+      "resetAll": "Alles resetten"
+    },
+    "configure": {
+      "methodSaved": "Betaalmethode is opgeslagen.",
+      "fields": {
+        "name": {
+          "label": "Checkout-naam",
+          "description": "De betaalmethode-naam die bij de kassa wordt weergegeven. Deze moet in alle ondersteunde storefront-talen kunnen worden vertaald."
+        },
+        "enableOnCheckout": {
+          "label": "Inchecken inschakelen",
+          "description": "Schakelt betalingsmethode in of uit bij checkout."
+        },
+        "templateName": {
+          "label": "Sjabloonnaam",
+          "description": "Leeg laten, dan wordt de standaard betaalpagina weergegeven."
+        },
+        "vaultTitle": {
+          "label": "Vault-titel"
+        },
+        "instantPayment": {
+          "label": "Alleen directe betalingen",
+          "description": "Bepaal of u betalingen die direct zijn met deze betaalmethode wilt accepteren"
+        },
+        "directDebitRecurrence": {
+          "label": "Type terugkerende incasso",
+          "unique": "Eenmalig",
+          "recurring": "Periodiek"
+        },
+        "directDebitSignature": {
+          "label": "Type handtekening voor incasso",
+          "SMS": "SMS",
+          "UNSIGNED": "UNSIGNED",
+          "TICK_BOX": "TICK_BOX"
+        },
+        "sessionTimeout": {
+          "label": "Sessie time-out",
+          "description": "Klanten die proberen hun betaling na deze termijn te voltooien, mogen hun transactie niet afronden. Toegestane termijn, van 1 tot 1440 minuten (24 uur)"
+        },
+        "productId": {
+          "label": "Product ID",
+          "description": "Definieer het merk dat is gekoppeld aan uw Intersolve-cadeaukaart door de te gebruiken productId op te geven."
+        },
+        "paymentOption": {
+          "label": "Oney3x4x betalingsoptie"
+        },
+        "logo": {
+          "label": "Een afbeelding downloaden",
+          "description": "",
+          "error": "Een bestand leveren in een van de ondersteunde formaten (PNG, JPG, SVG)."
+        },
+        "enableGroupCards": {
+          "label": "Kaartgroepering inschakelen",
+          "description": "Groepeer alle kaartbetalingsmethoden onder één optie op de checkout-pagina."
+        },
+        "flowType": {
+          "label": "Type",
+          "redirect": "Redirect",
+          "iframe": "iFrame"
+        }
+      }
+    },
+    "switchToStore": {
+      "title": "Onopgeslagen wijzigingen",
+      "description": "De wijzigingen die u hebt aangebracht zijn niet opgeslagen. Wilt u doorgaan zonder op te slaan?"
+    },
+    "messages": {
+      "methodAdded": "Nieuwe betaalmethode toegevoegd."
+    }
+  },
+  "generalSettings": {
+    "title": "Instellingen",
+    "accountSettings": {
+      "title": "Accountinstellingen",
+      "message": "Accountinstellingen succesvol opgeslagen.",
+      "error": "Fout bij het opslaan van accountinstellingen."
+    },
+    "paymentSettings": {
+      "title": "Betalingsinstellingen",
+      "description": "Stel de standaardinstellingen voor alle betaalmethoden in.",
+      "message": "Instellingen succesvol opgeslagen.",
+      "error": "Fout bij het opslaan van betalingsinstellingen.",
+      "paymentAction": {
+        "title": "Betaactie",
+        "description": "",
+        "values": {
+          "authorize": "Autorisatie alleen",
+          "authorizeCapture": "Autoriseer en verwerk"
+        }
+      },
+      "automaticCapture": {
+        "title": "Automatische afschrijving",
+        "description": "Automatische afschrijving geldt voor alle betalingen die alleen geautoriseerd zijn",
+        "values": {
+          "never": "Nooit",
+          "oneHour": "1 uur",
+          "twoHours": "2 uur",
+          "fourHours": "4 uur",
+          "eightHours": "8 uur",
+          "oneDay": "24 uur",
+          "twoDays": "2 dagen",
+          "fiveDays": "5 dagen"
+        }
+      },
+      "paymentCapturedStatus": {
+        "title": "Mapping van betalingsstatus geaccepteerd",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "paymentErrorStatus": {
+        "title": "Mapping van betalingsstatus fout",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "paymentPendingStatus": {
+        "title": "Mapping van betalingsstatus in afwachting",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "paymentAuthorizedStatus": {
+        "title": "Mapping van betalingsstatus geautoriseerd",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "paymentCancelledStatus": {
+        "title": "Mapping van betalingsstatus geannuleerd",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "paymentRefundedStatus": {
+        "title": "Mapping van betalingsstatus gerestoreerd",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "paymentPartiallyRefundedStatus": {
+        "title": "Partially refunded payment status mapping",
+        "description": "Let op, het wijzigen van deze instelling kan een grote impact hebben op de verwerking van uw betalingen. wijzig deze optie alleen uit specifieke behoeften als u bekend bent met de workflows van statussen."
+      },
+      "attemptNumber": {
+        "title": "Maximale aantal betaalpogingen",
+        "description": "Definieer hoeveel betaalpogingen per klant zijn toegestaan op de afgeschermde betaalpagina.",
+        "error": "Het aantal pogingen moet tussen 1 en 10 liggen."
+      },
+      "applySurcharge": {
+        "title": "Toepassen toeslag",
+        "description": "De toeslag maakt het mogelijk om de klant een extra bedrag te vragen op basis van de gebruikte kaart."
+      }
+    },
+    "cardsSettings": {
+      "title": "Cards settings",
+      "description": "Configure the default settings for cards payment methods.",
+      "message": "Cards settings successfully saved.",
+      "error": "Failed to save cards settings.",
+      "enable3ds": {
+        "title": "Activeer 3-D Secure-authenticatie",
+        "description": "Dit betekent dat de challenge-stroom (waar een sterke authenticatie van de klant vereist is) en de frictionless-stroom (waaruitgevende bank de volledige verantwoordelijkheid neemt) kunnen worden geactiveerd."
+      },
+      "enforceStrongAuthentication": {
+        "title": "Sterke klantauthenticatie voor elke betaling vereisen",
+        "description": ""
+      },
+      "3dsExemption": {
+        "title": "Activeer 3DS-exemptie",
+        "description": "Door 3DS-exemptie te activeren, kunt u de kaartuitgever en uw acquiring evaluator het risiconiveau van de transacties tot de door u opgegeven limiet in EUR beoordelen. Als aan de criteria wordt voldaan, zijn uw klanten vrijgesteld van sterke klantauthenticatie (SCA).\n\nAls uw acquiring de exemptie afwijst en SCA vereist, wordt dit een \"soft decline\" genoemd. In dit geval zullen we proberen SCA bij de klant te verkrijgen en de transactie te resetten als de klant zich succesvol autenticeert.",
+        "warning": "Houd er rekening mee dat als er fraude optreedt bij een transactie waarvoor een vrijstelling is verleend, de verantwoordelijkheid bij de handelaar ligt."
+      },
+      "exemptionType": {
+        "title": "Soort vrijstelling",
+        "description": "Low-Value-vrijstelling is geschikt voor transacties onder de opgegeven geldwaardegrens van 30 EUR, waardoor deze transacties met lage waarde de sterke klantauthenticatie (SCA) kunnen omzeilen en het betalingsproces kunnen vereenvoudigen.\nDaarentegen maakt vrijstelling transactie-risicoanalyse een dynamische risicobeoordeling van uw transacties mogelijk. De kaartuitgever en uw acquiring zullen de transactie beoordelen op basis van verschillende risicofactoren, waardoor transacties tot 100 EUR in aanmerking komen voor vrijstelling als ze als laag risico worden beschouwd.",
+        "values": {
+          "lowValue": "low-value",
+          "transactionRisk": "transaction-risk-analysis"
+        }
+      },
+      "exemptionLimit": {
+        "title": "Vrijstellingslimiet",
+        "description": "De vrijstellingslimiet wordt in EURO gespecificeerd. Dus als de valuta van het winkelwagentje niet EURO is, zal de omzetting afhangen van de wisselkoers naar EURO. Het is essentieel om EURO in uw omgeving te configureren en om nauwkeurige omzettingen te garanderen, houd uw wisselkoersen up-to-date.\nAls deze waarde niet is geconfigureerd, wordt de 3DS-vrijstelling niet toegepast en profiteert de transactie niet van de gevraagde vrijstelling.\nAanvullende opmerking: PSD2 noemt EURO als basiseenheid voor het bepalen van vrijstellingslimieten voor andere valuta’s in de EEA. Echter, elk gebied kan besluiten deze limieten aan te passen, en regio's buiten de EEA kunnen ook vrijgestelde verzoeken ondersteunen. Vanwege deze complexiteit kunnen wij niet garanderen dat het vrijstellingsverzoek door de uitgever of uw acquiring zal worden beoordeeld.",
+        "errorLowValue": "Het ingevoerde bedrag valt buiten het toegestane bereik van 0-30 EUR.",
+        "errorTransactionRisk": "Het ingevoerde bedrag valt buiten het toegestane bereik van 0-100 EUR."
+      }
+    },
+    "logSettings": {
+      "title": "Loginstellingen",
+      "description": "Schakel de debugmodus in om gedetailleerde logs te verzamelen voor foutopsporing en testen.",
+      "message": "Loginstellingen succesvol opgeslagen.",
+      "error": "Fout bij het opslaan van loginstellingen.",
+      "debugMode": {
+        "title": "Debugmodus",
+        "description": ""
+      },
+      "logDays": {
+        "title": "Bewaarperiode van logs (dagen)",
+        "description": "",
+        "error": "Het aantal dagen moet tussen 1 en 14 liggen."
+      }
+    },
+    "payByLinkSettings": {
+      "title": "Pay by Link-instellingen",
+      "description": "Stel de standaardinstellingen voor Pay by Link in.",
+      "message": "Pay by Link-instellingen succesvol opgeslagen.",
+      "error": "Fout bij het opslaan van Pay by Link-instellingen.",
+      "enable": {
+        "title": "Pay by Link inschakelen"
+      },
+      "payByLinkTitle": {
+        "title": "Pay by Link-titel",
+        "description": "Stel de naam in van de Pay By Link-betaalmethode in de backoffice van de winkel."
+      },
+      "expirationTime": {
+        "title": "Standaard vervaldatum",
+        "description": "Stel de standaard vervaldatum in dagen in.",
+        "error": "De standaard vervaldatum moet tussen 0 en 180 dagen liggen."
+      }
+    },
+    "disconnect": {
+      "title": "Ontkoppelen",
+      "warning": "Houd er rekening mee dat de configuratie en gegevens worden verwijderd.",
+      "disconnect": "Ontkoppelen",
+      "disconnectModal": {
+        "title": "Ontkoppelen?",
+        "message": "Wilt u uw winkel echt ontkoppelen? Hiermee worden alle betaalmethoden en configuratie-instellingen verwijderd en kunnen kopers geen aankopen meer doen in uw winkel."
+      }
+    }
+  },
+  "monitoring": {
+    "title": "Monitoring",
+    "download": "Downloaden",
+    "details": "Details",
+    "pagination": {
+      "numberOfItems": "%s - %s van %s"
+    },
+    "search": {
+      "placeholder": "Zoeken op bestel-ID of betalingsnummer"
+    },
+    "logs": {
+      "title": "Logs",
+      "noLogsMessage": "Er zijn momenteel geen logs.",
+      "severity": {
+        "DEBUG": "DEBUG",
+        "INFO": "INFO",
+        "WARNING": "WARNING",
+        "CRITICAL": "CRITICAL",
+        "ERROR": "ERROR"
+      },
+      "monitoringLogs": {
+        "orderId": "Order-ID",
+        "paymentNumber": "Betalingsnummer",
+        "logLevel": "Logniveau",
+        "logMessage": "Log",
+        "createdAt": "Gemaakt op",
+        "viewDetails": "Wijzigingen succesvol opgeslagen.",
+        "requestMethodEndpoint": "Methode en Endpoint",
+        "requestBody": "Vraagbody",
+        "responseStatusCode": "Antwoordcode",
+        "responseBody": "Antwoordbody"
+      },
+      "modal": {
+        "title": "Details",
+        "orderId": "Order-ID:",
+        "paymentNumber": "Betalingsnummer:",
+        "logLevel": "Logniveau:",
+        "logMessage": "Log:",
+        "createdAt": "Gemaakt op:",
+        "viewDetails": "Wijzigingen succesvol opgeslagen:",
+        "requestMethod": "HTTP-methode:",
+        "requestEndpoint": "Endpoint:",
+        "requestBody": "Vraagbody:",
+        "responseStatusCode": "Antwoordcode:",
+        "responseBody": "Antwoordbody:"
+      }
+    },
+    "webhooks": {
+      "title": "Webhooks",
+      "noLogsMessage": "Er zijn geen Webhook-logs",
+      "status": {
+        "IN_PROGRESS": "IN BEHANDELING",
+        "COMPLETED": "VOLTOOID",
+        "PAID": "BETALEN",
+        "AWAITING": "IN AFWACHTING",
+        "FAIL": "FOUT"
+      },
+      "webhookEventsLogs": {
+        "orderId": "Order-ID",
+        "paymentNumber": "Betalingsnummer",
+        "paymentMethod": "Betalingsmethode",
+        "status": "Status",
+        "type": "Type",
+        "createdAt": "Gemaakt op",
+        "statusCode": "Statuscode",
+        "viewDetails": "Wijzigingen succesvol opgeslagen."
+      },
+      "modal": {
+        "title": "Webhook-details",
+        "orderId": "Order-ID:",
+        "paymentNumber": "Betalingsnummer:",
+        "paymentMethod": "Betalingsmethode:",
+        "status": "Status:",
+        "type": "Type:",
+        "createdAt": "Gemaakt op:",
+        "statusCode": "Statuscode:",
+        "viewDetails": "Wijzigingen succesvol opgeslagen:",
+        "webhookBody": "Webhook-inhoud:"
+      }
+    }
+  },
+  "countries": {
+    "BR": "Brazilië",
+    "MX": "Mexico",
+    "TK": "Tokelau",
+    "TR": "Turkije",
+    "AU": "Australië",
+    "AT": "Oostenrijk",
+    "BE": "België",
+    "BG": "Bulgarije",
+    "CA": "Canada",
+    "HR": "Kroatië",
+    "CY": "Cyprus",
+    "CZ": "Tsjechië",
+    "DK": "Denemarken",
+    "EE": "Estland",
+    "FI": "Finland",
+    "FR": "Frankrijk",
+    "DE": "Duitsland",
+    "GI": "Gibraltar",
+    "GR": "Griekenland",
+    "HK": "Hongkong",
+    "HU": "Hongarije",
+    "IS": "IJsland",
+    "IE": "Ierland",
+    "IT": "Italië",
+    "JP": "Japan",
+    "LV": "Letland",
+    "LI": "Liechtenstein",
+    "LT": "Litouwen",
+    "LU": "Luxemburg",
+    "MT": "Malta",
+    "NL": "Nederland",
+    "NZ": "Nieuw-Zeeland",
+    "NO": "Noorwegen",
+    "PL": "Polen",
+    "PT": "Portugal",
+    "PR": "Puerto Rico",
+    "RO": "Roemenië",
+    "SG": "Singapore",
+    "SK": "Slowakije",
+    "SI": "Slovenië",
+    "ES": "Spanje",
+    "SE": "Zweden",
+    "CH": "Zwitserland",
+    "AE": "Verenigde Arabische Emiraten",
+    "GB": "Verenigd Koninkrijk",
+    "US": "Verenigde Staten van Amerika"
+  },
+  "WOP": {
+    "connection": "Verbind je winkel met Worldline",
+    "connectionTitle": "Configureer hieronder je API-sleutels. Als je geen account hebt, kun je <a href=\"https://signup.direct.preprod.worldline-solutions.com\" target=\"_blank\"><span>hier</span></a> er een aanmaken.",
+    "links": {
+      "createAccount": "https://signup.direct.preprod.worldline-solutions.com/",
+      "configurePlugin": "https://docs.direct.worldline-solutions.com/en/integration/how-to-integrate/plugins/",
+      "readyToGoLive": "https://worldline.com/en/home/solutions/online-payments/wl-online-payments.html",
+      "generalDocumentation": "https://docs.direct.worldline-solutions.com/en/index"
+    },
+    "payments": {
+      "paymentGroups": {
+        "hosted": "Gehoste pagina"
+      },
+      "hostedCheckout": {
+        "logo": {
+          "description": "Het logo dat naast de Worldline-betaalmethode op de betalingspagina verschijnt. Toegestane afbeeldingsformaten: png, jpg en jpeg."
+        }
+      },
+      "flowType": {
+        "description": "Definieert het type flow dat klanten krijgen bij het betalen met deze betaalmethode:\n iFrame - creditcardvelden worden ingesloten in een iFrame-venster op de native checkout-pagina van het shopsysteem\n Redirect - wordt aangeboden als standaard betaalmethode en leidt klanten door naar de Worldline-pagina waar ze hun creditcardgegevens invoeren"
+      }
+    },
+    "documentationLink": "https://docs.direct.worldline-solutions.com/en/payment-methods-and-features/payment-methods/",
+    "generalSettings": {
+      "accountSettings": {
+        "description": "Beheer uw voorkeuren en API-configuraties van uw Worldline-account."
+      },
+      "payByLinkSettings": {
+        "enable": {
+          "description": "Met onze Pay By Link-functie kunt u een betaling naar uw klanten sturen als ze de betaling niet voltooien op Worldline tijdens het betaalproces, of als u een bestelling voor een klant wilt aanmaken via de back-office van de winkel en vervolgens een betalingslink naar de klant wilt sturen."
+        },
+        "default": "Worldline Pay by Link"
+      },
+      "disconnect": {
+        "description": "Om een ander Worldline-account te verbinden of los te koppelen van deze winkel, klik op de knop Ontkoppelen hieronder."
+      }
+    },
+    "monitoring": {
+      "logs": {
+        "description": "Hier kunt u alle verzonden verzoeken en de ontvangen antwoorden van het Worldline-systeem bekijken."
+      },
+      "webhooks": {
+        "description": "Hier kunt u de ontvangen betalingswebhooks en hun verwerkingstatus in het Worldline-systeem bekijken."
+      }
+    }
+  }
+}

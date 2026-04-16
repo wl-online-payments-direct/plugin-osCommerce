@@ -1,0 +1,19 @@
+{
+  "generalSettings": {
+    "restrictions": {
+      "title": "osCommerce Restrictions",
+      "description": "Configure the standard osCommerce restrictions for payment providers.",
+      "allowedOnlyFor": {
+        "title": "Allowed only for"
+      },
+      "availableForCountries": {
+        "title": "Available for countries"
+      },
+      "availableFor": {
+        "title": "Available for"
+      },
+      "error": "Failed to save restrictions.",
+      "message": "Restrictions successfully saved."
+    }
+  }
+}

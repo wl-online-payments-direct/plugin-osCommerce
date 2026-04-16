@@ -1,0 +1,210 @@
+{
+  "TEXT_PAY_WITH_STORED_CARD": {
+    "en": "Pay with my previously saved card %S",
+    "fr": "Payer avec ma carte enregistrée %S",
+    "de": "Mit meiner gespeicherten Karte %S",
+    "nl": "Betaal met mijn opgeslagen kaart %S",
+    "es": "Pagar con mi tarjeta guardada %S",
+    "it": "Paga con la mia carta salvata %S"
+  },
+  "TEXT_PAYMENT_ERROR": {
+    "en": "An error occurred while processing the payment.",
+    "fr": "Une erreur est survenue lors du traîtement du paiement",
+    "de": "Bei der Verarbeitung der Zahlung ist ein Fehler aufgetreten.",
+    "nl": "Er is een fout opgetreden tijdens het verwerken van de betaling.",
+    "es": "Ocurrió un error al procesar el pago.",
+    "it": "Si è verificato un errore durante l'elaborazione del pagamento."
+  },
+  "TEXT_WAITING_TITLE": {
+    "en": "Please wait while we are processing your payment.",
+    "fr": "Veuillez patienter pendant que nous traitons votre paiement.",
+    "de": "Bitte warten Sie, während wir Ihre Zahlung verarbeiten.",
+    "nl": "Even geduld terwijl we uw betaling verwerken.",
+    "es": "Por favor, espere mientras procesamos su pago.",
+    "it": "Attendere mentre elaboriamo il pagamento."
+  },
+  "TEXT_PENDING_TRANS_MSG": {
+    "en": "The transaction has not been confirmed yet.",
+    "fr": "La transaction n'a pas encore été confirmée.",
+    "de": "Die Transaktion wurde noch nicht bestätigt.",
+    "nl": "De transactie is nog niet bevestigd.",
+    "es": "La transacción aún no ha sido confirmada.",
+    "it": "La transazione non è stata ancora confermata."
+  },
+  "TEXT_PENDING_TRANS_DETAILS": {
+    "en": "We suggest you contact our customer service using this link:",
+    "fr": "Nous vous suggérons de contacter notre service client en utilisant ce lien :",
+    "de": "Wir empfehlen Ihnen, unseren Kundenservice über diesen Link zu kontaktieren:",
+    "nl": "We raden u aan contact op te nemen met onze klantenservice via deze link:",
+    "es": "Le sugerimos que se ponga en contacto con nuestro servicio de atención al cliente mediante este enlace:",
+    "it": "Ti consigliamo di contattare il nostro servizio clienti utilizzando questo link:"
+  },
+  "TEXT_PENDING_TRANS_INSTRUCTIONS": {
+    "en": "Please also provide us these transactions details:",
+    "fr": "Veuillez également nous fournir ces détails de transaction :",
+    "de": "Bitte geben Sie uns auch diese Transaktionsdetails:",
+    "nl": "Geef ons ook deze transactiegegevens:",
+    "es": "Por favor, proporciónenos también estos detalles de la transacción:",
+    "it": "Si prega inoltre di fornirci questi dettagli della transazione:"
+  },
+  "TEXT_PAYMENT_ID_LABEL": {
+    "en": "Payment ID:",
+    "fr": "ID de paiement :",
+    "de": "Zahlungs-ID:",
+    "nl": "Betalings-ID:",
+    "es": "ID de pago:",
+    "it": "ID pagamento:"
+  },
+  "TEXT_PRODUCT_TYPE_LABEL": {
+    "en": "Product type:",
+    "fr": "Type de produit:",
+    "de": "Produkttyp:",
+    "nl": "Producttype:",
+    "es": "Tipo de producto:",
+    "it": "Tipo di prodotto:"
+  },
+  "TEXT_PRODUCT_TYPE_OPTION_NONE_LABEL": {
+    "en": "None",
+    "fr": "Aucun",
+    "de": "Keine",
+    "nl": "Geen",
+    "es": "Ninguno",
+    "it": "Nessuno"
+  },
+  "TEXT_PRODUCT_TYPE_OPTION_FOOD_AND_DRINK_LABEL": {
+    "en": "Food and Drink",
+    "fr": "Food and Drink",
+    "de": "Food and Drink",
+    "nl": "Food and Drink",
+    "es": "Food and Drink",
+    "it": "Food and Drink"
+  },
+  "TEXT_PRODUCT_TYPE_OPTION_HOME_AND_GARDEN_LABEL": {
+    "en": "Home and Garden",
+    "fr": "Home and Garden",
+    "de": "Home and Garden",
+    "nl": "Home and Garden",
+    "es": "Home and Garden",
+    "it": "Home and Garden"
+  },
+  "TEXT_PRODUCT_TYPE_OPTION_GIFT_AND_FLOWERS_LABEL": {
+    "en": "Gift and Flowers",
+    "fr": "Gift and Flowers",
+    "de": "Gift and Flowers",
+    "nl": "Gift and Flowers",
+    "es": "Gift and Flowers",
+    "it": "Gift and Flowers"
+  },
+  "TEXT_HOSTED_CHECKOUT_ID_LABEL": {
+    "en": "Checkout ID:",
+    "fr": "ID de paiement :",
+    "de": "Kassen-ID:",
+    "nl": "Afrekenen-ID:",
+    "es": "ID de finalización:",
+    "it": "ID checkout:"
+  },
+  "TEXT_SURCHARGE_WARNING": {
+    "en": "Please note that a surcharge may be applied to the amount you have to pay depending on the payment method you will use.",
+    "fr": "Veuillez noter qu'un supplément peut être appliqué au montant que vous devez payer en fonction du mode de paiement que vous utiliserez.",
+    "de": "Bitte beachten Sie, dass je nach der von Ihnen gewählten Zahlungsmethode ein Zuschlag auf den zu zahlenden Betrag erhoben werden kann.",
+    "nl": "Houd er rekening mee dat er een toeslag kan worden toegepast op het bedrag dat u moet betalen, afhankelijk van de betaalmethode die u gebruikt.",
+    "es": "Tenga en cuenta que se puede aplicar un recargo al importe que debe pagar en función del método de pago que utilice.",
+    "it": "Si prega di notare che potrebbe essere applicato un supplemento all'importo da pagare a seconda del metodo di pagamento utilizzato."
+  },
+  "TEXT_PRODUCT_TYPE_CONFIG_TAB_TITLE": {
+    "en": "Modules",
+    "fr": "Modules",
+    "de": "Module",
+    "nl": "Modules",
+    "es": "Módulos",
+    "it": "Moduli"
+  },
+  "TEXT_PRODUCT_TYPE_CONFIG_TITLE": {
+    "en": "Gift card specific configuration",
+    "fr": "Configuration spécifique à la carte cadeau",
+    "de": "Geschenkkartenspezifische Konfiguration",
+    "nl": "Geschenkaartspecifieke configuratie",
+    "es": "Configuración específica de tarjeta de regalo",
+    "it": "Configurazione specifica della gift card"
+  },
+  "TEXT_PRODUCT_TYPE_CONFIG_DESCRIPTION": {
+    "en": "Please configure this section in case you accept gift cards as payment methods with %s",
+    "fr": "Veuillez configurer cette section si vous acceptez les cartes cadeaux comme méthodes de paiement avec %s.",
+    "de": "Bitte konfigurieren Sie diesen Abschnitt, wenn Sie Geschenkkarten als Zahlungsmethoden mit %s akzeptieren.",
+    "nl": "Configureer deze sectie alstublieft als u geschenkkaarten als betaalmethoden accepteert met %s.",
+    "es": "Por favor configure esta sección si acepta tarjetas de regalo como métodos de pago con %s.",
+    "it": "Si prega di configurare questa sezione se accetti gift card come metodi di pagamento con %s."
+  },
+  "TEXT_FRAUD_RESULT": {
+    "en": "Fraud result",
+    "fr": "Résultat de fraude",
+    "de": "Betrugsergebnis",
+    "nl": "Frauderesultaat",
+    "es": "Resultado de fraude",
+    "it": "Risultato frode"
+  },
+  "TEXT_LIABILITY": {
+    "en": "Liability",
+    "fr": "Responsabilité",
+    "de": "Haftung",
+    "nl": "Aansprakelijkheid",
+    "es": "Responsabilidad",
+    "it": "Responsabilità"
+  },
+  "TEXT_THREE_DS_EXEMPTION_TYPE": {
+    "en": "3DS Exemption type",
+    "fr": "Type d'exemption 3DS",
+    "de": "3DS-Ausnahmetyp",
+    "nl": "3DS-uitzonderingstype",
+    "es": "3DS Exemption type",
+    "it": "Tipo di esenzione 3DS"
+  },
+  "TEXT_PRODUCT_TYPE_CONFIG_HEADER_DESCRIPTION": {
+    "en": "This module offers a 1-click integration to start accepting payments and grow your revenues by offering your customers with global and regional payment methods to sell across Europe.",
+    "fr": "Ce module propose une intégration en un clic pour commencer à accepter des paiements avec les API (interfaces de programmation d’application) Worldline Direct (ancien Ingenico-Ogone). Augmentez vos recettes en proposant à vos clients des méthodes de paiement mondiales et régionales pour vendre dans toute l’Europe.",
+    "de": "Dieses Modul bietet eine 1-Klick-Integration für den Beginn der Annahme von Zahlungen mit den Worldline Direct APIs (früher Ingenico-Ogone). Steigern Sie Ihren Umsatz, indem Sie Ihren Kunden globale und regionale Zahlungsmethoden für den europaweiten Verkauf anbieten.",
+    "nl": "In deze module biedt een 1-klik-integratie waarmee je kunt starten met het aanvaarden van betalingen met de API's van Worldline Direct (voorheen Ingenico-Ogone). Verhoog je inkomsten door je klanten wereldwijde en regionale betalingsmethoden te bieden waarmee je in heel Europa kunt verkopen.",
+    "es": "Este módulo ofrece una integración en un clic para empezar a aceptar pagos con las API directas de Worldline (anteriormente, Ingenico-Ogone). Al ofrecer a tus clientes métodos de pago globales y regionales, podrás vender por toda Europa, lo que te permitirá aumentar los ingresos.",
+    "it": "Questo modulo offre un’integrazione con 1 clic per iniziare ad accettare pagamenti con le API dirette Worldline (ex Ingenico-Ogone). Offrendo ai clienti metodi di pagamento globali e regionali, è possibile vendere i propri prodotti in tutta Europa e aumentare di conseguenza i ricavi."
+  },
+  "TEXT_PARTIAL_PAYMENT_REFUND": {
+    "en": "Please note that the total paid amount (%s) will be refunded.",
+    "fr": "Veuillez noter que le montant total de la commande payé (%s) sera remboursé.",
+    "de": "Bitte beachten Sie, dass der insgesamt bezahlte Bestellbetrag (%s) erstattet wird.",
+    "nl": "Houd er rekening mee dat het totale betaalde bestelbedrag (%s) wordt terugbetaald.",
+    "es": "Tenga en cuenta que el importe total del pedido pagado (%s) será reembolsado.",
+    "it": "Si noti che l'importo totale dell'ordine pagato (%s) sarà rimborsato."
+  },
+  "TEXT_COPY_PAYMENT_LINK": {
+    "en": "Copy payment link",
+    "fr": "Copier le lien de paiement",
+    "de": "Zahlungslink kopieren",
+    "nl": "Kopieer betaallink",
+    "es": "Copiar enlace de pago",
+    "it": "Copia link di pagamento"
+  },
+  "TEXT_PAY_BY_LINK_TITLE": {
+    "en": "%s Pay by Link",
+    "fr": "%s Pay by Link",
+    "de": "%s Pay by Link",
+    "nl": "%s Pay by Link",
+    "es": "%s Pay by Link",
+    "it": "%s Pay by Link"
+  },
+  "TEXT_PAYMENT_LINK_COPIED": {
+    "en": "Payment link copied",
+    "fr": "Lien de paiement copié",
+    "de": "Zahlungslink kopiert",
+    "nl": "Betalingslink gekopieerd",
+    "es": "Enlace de pago copiado",
+    "it": "Link di pagamento copiato"
+  },
+  "TEXT_PAYMENT_LINK_EXPIRES_AT": {
+    "en": "Payment link expires at",
+    "fr": "Le lien de paiement expire à ",
+    "de": "Zahlungslink läuft ab am",
+    "nl": "Betalingslink verloopt op",
+    "es": "Enlace de pago expira en",
+    "it": "Il link di pagamento scade il"
+  }
+}

@@ -1,0 +1,27 @@
+#op-page .op-sliding-modal {
+    top: 122px;
+    height: 87vh;
+}
+
+#op-page .op-dark-mask {
+    left: 0;
+}
+
+#op-page .op-header-menu {
+    top: 318px;
+    width: 95vw;
+    right: 11px;
+}
+
+#op-page .op-notifications-page .op-table-heading .op-search-wrapper .op-search-container .op-search-field-wrapper .op-search-input
+{
+    padding: 10px 12px 10px 36px !important
+}
+
+#op-page main {
+    flex-grow: 1;
+    width: 100%;
+    max-height: max-content;
+    overflow: visible;
+    min-width: 100%;
+}

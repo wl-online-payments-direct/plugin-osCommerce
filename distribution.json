@@ -1,0 +1,28 @@
+{
+    "name": "Worldline GoPay",
+    "description": "This module offers a 1-click integration to start accepting payments and grow your revenues by offering your customers with global and regional payment methods to sell across Europe.",
+    "type": "payment",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Worldline GoPay",
+            "role": "Developer"
+        }
+    ],
+    "src": [
+        {
+            "action": "add",
+            "type": "file",
+            "path": "worldlineop.php"
+        },
+        {
+            "action": "copy",
+            "type": "dir",
+            "path": "WOP"
+        }
+    ],
+    "require": {
+        "platform": "True"
+    },
+    "class": "worldlineop"
+}
