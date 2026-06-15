@@ -1148,7 +1148,7 @@ ul.op-bullet-list li {
   overflow-y: auto;
   scrollbar-width: thin;
   margin-left: 0;
-  width: 160px;
+  width: 100%;
 }
 #op-main-header .op-main-title-header .op-status .op-store-selector .opp-store {
   position: relative;
@@ -1469,7 +1469,7 @@ ul.op-bullet-list li {
   overflow-y: auto;
   scrollbar-width: thin;
   margin-left: 0;
-  width: 160px;
+  width: 100%;
 }
 #op-main-header .op-main-responsive-header .op-store-selector .opp-store {
   position: relative;
@@ -5893,7 +5893,7 @@ ul.op-bullet-list li {
   overflow-y: auto;
   scrollbar-width: thin;
   margin-left: 0;
-  width: 160px;
+  width: 100%;
 }
 #op-main-header .op-main-title-header .op-status .op-store-selector .opp-store {
   position: relative;
@@ -6214,7 +6214,7 @@ ul.op-bullet-list li {
   overflow-y: auto;
   scrollbar-width: thin;
   margin-left: 0;
-  width: 160px;
+  width: 100%;
 }
 #op-main-header .op-main-responsive-header .op-store-selector .opp-store {
   position: relative;

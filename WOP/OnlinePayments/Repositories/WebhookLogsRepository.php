@@ -123,7 +123,7 @@ class WebhookLogsRepository extends BaseRepositoryWithConditionalDelete implemen
         if (empty($reference)) {
             return null;
         }
-        $query = tep_db_query("SELECT orders_id\r\n             FROM tmp_orders\r\n             WHERE child_id = '" . tep_db_input($reference) . "'\r\n             LIMIT 1");
+        $query = tep_db_query("SELECT orders_id\n             FROM tmp_orders\n             WHERE child_id = '" . tep_db_input($reference) . "'\n             LIMIT 1");
         if ($result = tep_db_fetch_array($query)) {
             return (int) $result['orders_id'];
         }

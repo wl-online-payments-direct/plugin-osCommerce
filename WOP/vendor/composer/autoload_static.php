@@ -4,10 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfbb1c1dedbf863cb624dfbb43aaab54c
+class ComposerStaticInit6a66b691b395e81fbdb76dea760f48be
 {
     public static $prefixLengthsPsr4 = array (
-        'c' => 
+        'c' =>
         array (
             'common\\modules\\orderPayment\\WOP\\Robtimus\\Multipart\\' => 51,
             'common\\modules\\orderPayment\\WOP\\OnlinePayments\\Sdk\\' => 51,
@@ -16,16 +16,16 @@ class ComposerStaticInitfbb1c1dedbf863cb624dfbb43aaab54c
     );
 
     public static $prefixDirsPsr4 = array (
-        'common\\modules\\orderPayment\\WOP\\Robtimus\\Multipart\\' => 
+        'common\\modules\\orderPayment\\WOP\\Robtimus\\Multipart\\' =>
         array (
             0 => __DIR__ . '/..' . '/robtimus/multipart/src/Robtimus/Multipart',
         ),
-        'common\\modules\\orderPayment\\WOP\\OnlinePayments\\Sdk\\' => 
+        'common\\modules\\orderPayment\\WOP\\OnlinePayments\\Sdk\\' =>
         array (
             0 => __DIR__ . '/..' . '/wl-online-payments-direct/sdk-php/src/OnlinePayments/Sdk',
             1 => __DIR__ . '/..' . '/wl-online-payments-direct/sdk-php/lib/OnlinePayments/Sdk',
         ),
-        'common\\modules\\orderPayment\\WOP\\OnlinePayments\\Core\\' => 
+        'common\\modules\\orderPayment\\WOP\\OnlinePayments\\Core\\' =>
         array (
             0 => __DIR__ . '/..' . '/online-payments/integration-core/src',
         ),
@@ -881,9 +881,9 @@ class ComposerStaticInitfbb1c1dedbf863cb624dfbb43aaab54c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfbb1c1dedbf863cb624dfbb43aaab54c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfbb1c1dedbf863cb624dfbb43aaab54c::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitfbb1c1dedbf863cb624dfbb43aaab54c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6a66b691b395e81fbdb76dea760f48be::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6a66b691b395e81fbdb76dea760f48be::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit6a66b691b395e81fbdb76dea760f48be::$classMap;
 
         }, null, ClassLoader::class);
     }

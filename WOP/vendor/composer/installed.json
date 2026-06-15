@@ -2,12 +2,18 @@
     "packages": [
         {
             "name": "online-payments\/integration-core",
-            "version": "1.0.2",
-            "version_normalized": "1.0.2.0",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
             "source": {
                 "type": "git",
                 "url": "git@github.com:Worldline-Plugins\/integration-core.git",
-                "reference": "9d278781b5b31fcb7e1be73ec033df259dbcee79"
+                "reference": "6578b241ea3d9247394982d247b1e511719fc848"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https:\/\/api.github.com\/repos\/Worldline-Plugins\/integration-core\/zipball\/6578b241ea3d9247394982d247b1e511719fc848",
+                "reference": "6578b241ea3d9247394982d247b1e511719fc848",
+                "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
@@ -22,9 +28,10 @@
                 "phpunit\/phpunit": "^8.5",
                 "symfony\/console": "^5.4"
             },
-            "time": "2026-03-19T09:30:39+00:00",
+            "time": "2026-05-19T08:34:54+00:00",
+            "default-branch": true,
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "common\\modules\\orderPayment\\WOP\\OnlinePayments\\Core\\": "src"

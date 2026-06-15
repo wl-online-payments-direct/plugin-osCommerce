@@ -91,7 +91,7 @@ class ModuleRestrictionsService
         // Add "Worldwide" option first
         $result[] = ['value' => '', 'label' => 'Worldwide'];
         // Get countries from database
-        $countries = tep_db_query("SELECT c.countries_name, c.countries_iso_code_3\r\n             FROM " . TABLE_PLATFORMS_ADDRESS_BOOK . " AS pab\r\n             LEFT JOIN " . TABLE_COUNTRIES . " AS c ON (c.countries_id = pab.entry_country_id)\r\n             WHERE c.language_id = '" . (int) $languageId . "'\r\n             GROUP BY c.countries_id\r\n             ORDER BY c.countries_name ASC");
+        $countries = tep_db_query("SELECT c.countries_name, c.countries_iso_code_3\n             FROM " . TABLE_PLATFORMS_ADDRESS_BOOK . " AS pab\n             LEFT JOIN " . TABLE_COUNTRIES . " AS c ON (c.countries_id = pab.entry_country_id)\n             WHERE c.language_id = '" . (int) $languageId . "'\n             GROUP BY c.countries_id\n             ORDER BY c.countries_name ASC");
         while ($country = tep_db_fetch_array($countries)) {
             $result[] = ['value' => $country['countries_iso_code_3'], 'label' => $country['countries_name']];
         }

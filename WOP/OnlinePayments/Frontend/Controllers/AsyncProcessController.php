@@ -52,7 +52,7 @@ class AsyncProcessController extends Sceleton
             fastcgi_finish_request();
             return;
         }
-        if (function_exists('litespeed_finish_request') && is_callable('litespeed_finish_request')) {
+        if (function_exists('common\modules\orderPayment\WOP\litespeed_finish_request') && is_callable('common\modules\orderPayment\WOP\litespeed_finish_request')) {
             litespeed_finish_request();
             return;
         }
